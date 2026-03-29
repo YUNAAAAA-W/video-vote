@@ -11,7 +11,7 @@ DATA_FILE = 'video_votes.csv'
 VIDEO_CONFIG = {
     1: {
         "name": "视频一",
-        "labels": ["水果", "助农", "贵州", "新鲜"],
+        "labels": ["猕猴桃", "助农", "贵州", "营养"],
         "color": "#27ae60"  # 深绿色
     },
     2: {
