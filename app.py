@@ -11,25 +11,21 @@ DATA_FILE = 'video_votes.csv'
 VIDEO_CONFIG = {
     1: {
         "name": "视频一",
-        "full_name": "水果助农",
         "labels": ["水果", "助农", "贵州", "新鲜"],
         "color": "#27ae60"  # 深绿色
     },
     2: {
         "name": "视频二",
-        "full_name": "观山湖公园",
         "labels": ["公园", "风景", "山水", "观山湖"],
         "color": "#2980b9"  # 深蓝色
     },
     3: {
         "name": "视频三",
-        "full_name": "贵阳美食",
         "labels": ["贵阳", "美食", "香辣", "特色"],
         "color": "#f39c12"  # 深黄色
     },
     4: {
         "name": "视频四",
-        "full_name": "苗绣非遗",
         "labels": ["贵州", "非遗", "苗绣", "文化"],
         "color": "#c0392b"  # 深红色
     }
