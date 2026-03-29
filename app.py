@@ -7,7 +7,7 @@ import random
 # --- 配置 ---
 DATA_FILE = 'video_votes.csv'
 
-# 定义四个视频的配置
+# 定义四个视频的配置（已去掉full_name）
 VIDEO_CONFIG = {
     1: {
         "name": "视频一",
@@ -51,7 +51,7 @@ def clear_all_data():
         os.remove(DATA_FILE)
     init_data()
 
-# --- 页面 1: 学生投票端 ---
+# --- 页面 1: 学生投票端（已去掉括号和full_name）---
 def student_page():
     st.title("🎥 为视频选择标签")
     
@@ -63,7 +63,8 @@ def student_page():
     
     config = VIDEO_CONFIG[video_choice]
     
-    st.markdown(f"### 你选择的是：{config['name']} ({config['full_name']})")
+    # 这里去掉了括号和full_name，只显示视频一/二/三/四
+    st.markdown(f"### 你选择的是：{config['name']}")
     
     state_key = f'voted_{video_choice}'
     if state_key not in st.session_state:
@@ -158,12 +159,12 @@ def admin_page():
                 name='投票'
             ))
 
-        # 【关键修改】强制设置背景为纯白色
+        # 纯白背景设置
         fig.update_layout(
             width=800,
             height=600,
-            paper_bgcolor='white', # 外层背景
-            plot_bgcolor='white',  # 坐标轴内背景
+            paper_bgcolor='white',
+            plot_bgcolor='white',
             xaxis=dict(range=[-axis_range, axis_range], showticklabels=False, showgrid=True, zeroline=False, gridcolor='#eeeeee'),
             yaxis=dict(range=[-axis_range, axis_range], showticklabels=False, showgrid=True, zeroline=False, scaleanchor="x", scaleratio=1, gridcolor='#eeeeee'),
             annotations=annotations,
